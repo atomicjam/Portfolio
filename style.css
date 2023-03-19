@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: 'Verlag';
+        font-weight: normal;
+        font-display: swap;
+        src: url('/fonts/verlag-book-webfont.woff2') format('woff2'), url('/fonts/verlag-book-webfont.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Verlag';
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+        src: url('/fonts/verlag-bookitalic-webfont.woff2') format('woff2'), url('/fonts/verlag-bookitalic-webfont.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Verlag';
+        font-weight: bold;
+        font-display: swap;
+        src: url('/fonts/verlag-bold-webfont.woff2') format('woff2'), url('/fonts/verlag-bold-webfont.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Verlag';
+        font-weight: 900;
+        font-display: swap;
+        src: url('/fonts/verlag-black-webfont.woff2') format('woff2'), url('/fonts/verlag-black-webfont.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Verlag';
+        font-weight: 300;
+        font-display: swap;
+        src: url('/fonts/verlag-light-webfont.woff2') format('woff2'), url('/fonts/verlag-light-webfont.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Verlag';
+        font-weight: 100;
+        font-display: swap;
+        src: url('/fonts/verlag-xlight-webfont.woff2') format('woff2'), url('/fonts/verlag-xlight-webfont.woff') format('woff');
+    }
+
+    @keyframes PopIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.925);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .PopIn {
+        animation: PopIn 0.6s ease-in forwards;
+    }
+
+    .char-wrap {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .char,
+    .word {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .about-gradient {
+        background-image: linear-gradient(180deg,
+                rgb(71, 126, 120) 0%,
+                #243748 100%);
+    }
+
+    .clc-gradient {
+        background-image: linear-gradient(180deg,
+                rgb(71, 126, 120) 0%,
+                rgb(63, 87, 102) 23%,
+                rgb(70, 77, 103) 60%,
+                rgb(81, 81, 112) 80%,
+                rgb(87, 85, 117) 100%);
+    }
+
+    .helpdesk-gradient {
+        background-image: linear-gradient(180deg,
+                #243748 0%,
+                #4b749f 100%);
+    }
+
+    .springboard-gradient {
+        background-image: linear-gradient(180deg,
+                #5f2c82 0%,
+                #413951 30%,
+                #49a09d 100%);
+    }
+
+    .venues-gradient {
+        background-image: linear-gradient(180deg,
+                #3b5139 0%,
+                #3b5139 30%,
+                #292720 100%);
+    }
+
+    .parabola-gradient {
+        background-image: linear-gradient(180deg,
+                #550000 0%,
+                #a34742 15%,
+                #EA5D5D 50%,
+                #292720 100%);
+    }
+
+    .flourish-gradient {
+        background-image: linear-gradient(180deg,
+                #3E4981 0%,
+                #3E4981 15%,
+                #292720 100%);
+    }
+
+
+    .enrolment-gradient {
+        background-image: linear-gradient(180deg,
+                #DAE2F8 0%,
+                #292720 15%,
+                #292720 100%);
+    }
+
+    .enrichment-gradient {
+        background-image: linear-gradient(180deg,
+                #ED4264 0%,
+                #49415A 15%,
+                #49415A 100%);
+    }
+
+    .delorean-gradient {
+        background-image: linear-gradient(180deg,
+                #DC2424 0%,
+                #292720 15%,
+                #4A569D 100%);
+    }
+
+    .guild-gradient {
+        background-image: linear-gradient(180deg,
+                #5C258D 0%,
+                #4389A2 15%,
+                #4389A2 100%);
+    }
+
+    .fitness-gradient {
+        background-image: linear-gradient(180deg,
+                #24C6DC 0%,
+                #514A9D 15%,
+                #514A9D 100%);
+    }
+
+    .contractors-gradient {
+        background-image: linear-gradient(180deg,
+                #283048 0%,
+                #859398 15%,
+                #859398 100%);
+    }
+
+    .transfer-gradient {
+        background-image: linear-gradient(180deg,
+                #1D976C 0%,
+                #48415A 15%,
+                #859398 100%);
+    }
+
+    .appraisals-gradient {
+        background-image: linear-gradient(180deg,
+                #AA076B 0%,
+                #501659 15%,
+                #61045F 100%);
+    }
+
+    .auctions-gradient {
+        background-image: linear-gradient(180deg,
+                #FF512F 0%,
+                #48405A 16%,
+                #F09819 100%);
+    }
+
+    .exams-gradient {
+        background-image: linear-gradient(180deg,
+                #CC95C0 0%,
+                #49405C 15%,
+                #7AA1D2 100%);
+    }
+
+    .pathways-gradient {
+        background-image: linear-gradient(180deg,
+                #3CA55C 0%,
+                #49405C 12%,
+                #B5AC49 100%);
+    }
+
+    .emergency-gradient {
+        background-image: linear-gradient(180deg,
+                #881000 0%,
+                #49405C 15%,
+                #56B4D3 100%);
+    }
+
+}
