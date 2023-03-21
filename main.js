@@ -986,7 +986,7 @@ const scroll = () => {
             height: +400,
             scrollTrigger: {
                 trigger: item,
-                start: 'top center',
+                start: 'top bottom',
                 scrub: true,
             }
         });
