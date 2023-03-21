@@ -975,15 +975,15 @@ const scroll = () => {
 
     });
 
-
+// Image Animations
     const image_wrapper = [...document.querySelectorAll('.image_wrapper')];
     image_wrapper.forEach(item => { 
         gsap.to(item.querySelector('img'), {
             'will-change': 'transform',
             transformOrigin: '50% 50%',
             scale: 1.05,
-            rotationZ: () => gsap.utils.random(-2, 2),
-            translateY: 15,
+            translateY: 50,
+            height: +400,
             scrollTrigger: {
                 trigger: item,
                 start: 'top center',
