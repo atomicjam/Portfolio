@@ -181,13 +181,21 @@
                     <img src="/images/springboard/snow-logo.jpg" alt="Device Mockup iPad" class="object-cover w-full h-full">
                 </picture>
 
-                <picture class="object-cover aspect-video w-full opacity-0" x-intersect="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
-                    <img src="/images/placeholder/placeholder.png" alt="Device Mockup Browser" class="object-cover w-full h-full">
+                <picture class="object-cover w-full h-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
+                    <source type="image/avif" srcset="/images/springboard/cybirds.avif">
+                    <source type="image/webp" srcset="/images/springboard/cybirds.webp">
+                    <img src="/images/springboard/cybirds.jpg" alt="Device Mockup" class="object-cover w-full h-full">
                 </picture>
 
                 <div class="w-full h-48 md:h-full flex place-content-center justify-center">
                     <img src="/images/logo/CLC_Crest_Only_White.svg" class="w-16 h-auto z-10 opacity-75">
                 </div>
+
+                <picture class="object-cover w-full h-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
+                    <source type="image/avif" srcset="/images/springboard/bbc.avif">
+                    <source type="image/webp" srcset="/images/springboard/bbc.webp">
+                    <img src="/images/springboard/bbc.jpg" alt="Device Mockup" class="object-cover w-full h-full">
+                </picture>
             </div>
 
         </section>
