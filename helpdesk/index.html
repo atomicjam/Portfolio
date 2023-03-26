@@ -10,8 +10,8 @@
 <body style="visibility: hidden;" class="helpdesk-gradient text-white font-sans font-light overflow-x-hidden antialiased">
     <main>
         <!-- logo -->
-        <img src="/images/helpdesk/maintenance.jpg" class="absolute w-screen h-screen object-cover object-right-bottom top-0 left-0 opacity-40 z-0 grayscale">
-        <div class="absolute w-screen h-[105vh] object-cover top-0 left-0 opacity-100 z-10 bg-gradient-to-b from-transparent to-[#304155]"></div>
+        <img src="/images/helpdesk/maintenance.jpg" class="absolute w-screen h-screen object-cover object-right-bottom top-0 left-0 opacity-40 z-0 mix-blend-luminosity">
+        <div class="absolute w-screen h-[100vh] object-cover top-0 left-0 opacity-100 z-10 bg-gradient-to-b from-transparent to-[#314257]"></div>
         <div class="absolute top-12 right-12 text-white z-20 grid grid-flow-col gap-4 content-center underline decoration-wavy decoration-from-font underline-offset-4 decoration-sky-400 leading-8">
             <a href="/about/" class="underline decoration-wavy decoration-from-font underline-offset-4 decoration-sky-400">About</a>
             <a href="/" class="underline decoration-wavy decoration-from-font underline-offset-4 decoration-sky-400">Work</a>
@@ -87,11 +87,13 @@
                 <picture class="object-cover w-full h-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
                     <source type="image/avif" srcset="/images/helpdesk/helpdesk-browser.avif">
                     <source type="image/webp" srcset="/images/helpdesk/helpdesk-browser.webp">
-                    <img src="/images/helpdesk/helpdesk-browser.jpg" alt="Device Mockup Phones" class="object-cover w-full h-full">
+                    <img src="/images/helpdesk/helpdesk-browser.jpg" alt="Device Mockup" class="object-cover w-full h-full">
                 </picture>
 
                 <picture class="object-cover w-full h-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
-                    <img src="/images/helpdesk/helpdesk-phone.jpg" alt="Device Mockup Browser" class="object-cover w-full h-full">
+                    <source type="image/avif" srcset="/images/helpdesk/helpdesk-phone.avif">
+                    <source type="image/webp" srcset="/images/helpdesk/helpdesk-phone.webp">
+                    <img src="/images/helpdesk/helpdesk-phone.jpg" alt="Device Mockup" class="object-cover w-full h-full">
                 </picture>
             </div>
 
@@ -178,7 +180,9 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8" x-data>
                 <picture class="object-cover aspect-video w-full h-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
-                    <img src="/images/placeholder/placeholder.png" alt="Device Mockup Browser" class="object-cover w-full h-full">
+                    <source type="image/avif" srcset="/images/helpdesk/assets.avif">
+                    <source type="image/webp" srcset="/images/helpdesk/assets.webp">
+                    <img src="/images/helpdesk/assets.jpg" alt="Device Mockup Browser" class="object-cover w-full h-full">
                 </picture>
 
                 <picture class="object-cover w-full h-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
@@ -188,39 +192,28 @@
                 </picture>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="antialiased leading-normal my-8">
-                    <p class="my-4">
-                    todo
-                    </p>
-                </div>
-                <div>
-    
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" x-data>
-
-
-
-
-                <picture class="object-cover aspect-video w-full opacity-0" x-intersect="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
-                    <img src="/images/placeholder/placeholder.png" alt="Device Mockup Browser" class="object-cover w-full h-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8" x-data>
+                <picture class="object-cover w-full opacity-0" x-intersect="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
+                    <source type="image/avif" srcset="/images/helpdesk/newticket.avif">
+                    <source type="image/webp" srcset="/images/helpdesk/newticket.webp">
+                    <img src="/images/helpdesk/newticket.jpg" alt="Device Mockup Browser" class="object-cover w-full h-full">
                 </picture>
 
-                <picture class="object-cover aspect-video w-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
-                    <img src="/images/placeholder/placeholder.png" alt="Device Mockup Browser" class="object-cover w-full h-full">
+                <picture class="object-cover w-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
+                    <source type="image/avif" srcset="/images/helpdesk/sla.avif">
+                    <source type="image/webp" srcset="/images/helpdesk/sla.webp">
+                    <img src="/images/helpdesk/sla.jpg" alt="Device Mockup Browser" class="object-cover w-full h-full">
                 </picture>
 
-                <picture class="object-cover aspect-video w-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
-                    <img src="/images/placeholder/placeholder.png" alt="Device Mockup Browser" class="object-cover w-full h-full">
+                <picture class="object-cover w-full opacity-0" x-intersect.half="$el.classList.add('PopIn'); $el.classList.remove('opacity-0');">
+                    <source type="image/avif" srcset="/images/helpdesk/houses.avif">
+                    <source type="image/webp" srcset="/images/helpdesk/houses.webp">
+                    <img src="/images/helpdesk/houses.jpg" alt="Device Mockup Browser" class="object-cover w-full h-full">
                 </picture>
 
                 <div class="w-full h-48 md:h-full flex place-content-center justify-center">
                     <img src="/images/logo/CLC_Crest_Only_White.svg" class="w-16 h-auto z-10 opacity-75">
                 </div>
-
-
             </div>
 
         </section>
