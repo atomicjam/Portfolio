@@ -991,6 +991,25 @@ const scroll = () => {
             }
         });
     });
+// Flower Animation
+    const flower = [...document.querySelectorAll('svg[data-effect-flower]')];
+    flower.forEach(item => { 
+        gsap.to(item, {
+            'will-change': 'transform',
+            transformOrigin: '50% 50%',
+            opacity: 0.8,
+            rotate: 60,
+            scale: 1,
+            ease: 'sine',
+            scrollTrigger: {
+                trigger: item,
+                start: 'center center+=25%',
+                end: 'top top+=20%',
+                scrub: true,
+            }
+        });
+    });
+
 };
 
 
