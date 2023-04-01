@@ -5,8 +5,13 @@ import { VitePWA } from "vite-plugin-pwa"
 
 export default defineConfig({
     plugins: [
-        VitePWA({      
+        VitePWA({  
+                registerType: 'autoUpdate',    
                 manifest: { 
+                  name: 'Elliot Goode - Portfolio',
+                  short_name: 'Goode',
+                  description: 'Elliot Goode about me and portfolio.',
+                  theme_color: '#525252',
                   icons: [
                     {
                       src: "/icons/512.png",
