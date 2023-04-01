@@ -610,14 +610,31 @@ const scroll = () => {
         gsap.to(item, {
             'will-change': 'transform',
             transformOrigin: '50% 50%',
-            opacity: 0.5,
+            opacity: 0.7,
             rotate: 90,
             scale: 0.65,
-            ease: 'sine',
+            ease: 'back',
             scrollTrigger: {
                 trigger: item,
                 start: 'center bottom',
                 end: 'top top+=20%',
+                scrub: true,
+            }
+        });
+    });
+    const flower2 = [...document.querySelectorAll('svg[data-effect-flower2]')];
+    flower2.forEach(item => { 
+        gsap.to(item, {
+            'will-change': 'transform',
+            transformOrigin: '50% 50%',
+            opacity: 0.6,
+            rotate: -90,
+            scale: 0.75,
+            ease: 'back',
+            scrollTrigger: {
+                trigger: item,
+                start: 'center center+=45%',
+                end: 'top top',
                 scrub: true,
             }
         });
@@ -628,7 +645,7 @@ leaf.forEach(item => {
     gsap.to(item, {
         'will-change': 'transform',
         transformOrigin: '30% 100%',
-        opacity: 0.45,
+        opacity: 0.55,
         rotate: 20,
         scale: 1,
         ease: 'back',
