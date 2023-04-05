@@ -132,11 +132,11 @@
                 #501659 15%,
                 #61045F 100%);        
     }
-
+ 
     .enrichment-gradient {
         background-image: linear-gradient(180deg,
-                #ED4264 0%,
-                #49415A 15%,
+                #320f57 0%,
+                #43415a 15%,
                 #49415A 100%);
     }
 
@@ -156,8 +156,8 @@
 
     .fitness-gradient {
         background-image: linear-gradient(180deg,
-                #24C6DC 0%,
-                #514A9D 15%,
+                #343435 0%,
+                #2C668A 15%,
                 #514A9D 100%);
     }
 
@@ -208,6 +208,12 @@
                 #881000 0%,
                 #49405C 15%,
                 #56B4D3 100%);
+    }
+
+    .work-gradient {
+        background-image: linear-gradient(180deg,
+                #443e52 0%,
+                #1e182b 100%);
     }
 
 }

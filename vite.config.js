@@ -6,7 +6,10 @@ import { VitePWA } from "vite-plugin-pwa"
 export default defineConfig({
     plugins: [
         VitePWA({  
-                registerType: 'autoUpdate',    
+                registerType: 'autoUpdate',
+                workbox: {
+                  globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,avif,webp,mp4,webm,woff,woff2}']
+                },    
                 manifest: { 
                   name: 'Elliot Goode - Portfolio',
                   short_name: 'Goode',
@@ -27,6 +30,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
+                work: resolve(__dirname, 'work/index.html'),
                 about: resolve(__dirname, 'about/index.html'),
                 appraisals: resolve(__dirname, 'appraisals/index.html'),
                 auctions: resolve(__dirname, 'auctions/index.html'),
