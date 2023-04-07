@@ -68,8 +68,8 @@
         </div>
         <div class="antialiased leading-normal">
           <p class="my-4">
-            The site should define a view of modern education through sophisticated photography as a glimpse
-            into life at College, aiming to dismiss may of the pre conceptions of what a boarding school is.
+            Define a view of modern education through sophisticated photography, an glimpse
+            into life at College; aiming to dismiss many of the pre conceptions of what a boarding school 'is'.
           </p>
           <p class="my-4">
             Development must be flexible enough to act as a versatile backdrop for the variety of co-brands and internal services.
@@ -113,19 +113,19 @@
             Created on a traditional LAMP stack in 2016, life started from a foundation of <a href="http://silverstripe.org/" target="_blank">Silverstripe CMS</a> with custom page templates.
           </p>
           <p class="my-4">
-            Initially locally hosted at the College data centre as a VMWare Instance. A modernisation plan in 2019 migrated the project to an AWS EC2 Instance for improved resilience and scale.
+            Initially locally hosted at the College data centre as a VMWare Instance. Modernisation in 2019 migrated the project to an AWS EC2 Instance for improved resilience and scale.
           </p>
           <p class="my-4">
-            AWS additions included moving College hosted DNS to route53, edge caching to improve the experience for overseas users with AWS Cloudfront, security enhancements from AWS WAF & Shield and a more robust backup solution with AWS Backup.
+            AWS additions included moving DNS to route53, edge caching to improve the experience for overseas users with AWS Cloudfront, security enhancements from AWS WAF & Shield and a more robust backup solution with AWS Backup.
           </p>
           <p class="my-4">
-            To further reduce database latency and take advantage of AWS managed services MariaDB was swapped out for AWS RDS Database in 2020.
+            Further reducing database latency & taking advantage of AWS managed services MariaDB was swapped out for AWS RDS Database in 2020.
           </p>
           <p class="my-4">
-            CI/CD was handled by Github and Github actions running a suite of unit tests developed in PHPUnit. Docker instances that matched the cloud infrastructure ensured local development was consistent with our cloud offering.
+            CI/CD is handled by Github & Github actions running a suite of unit tests developed in PHPUnit. Docker instances matching the cloud infrastructure ensure local development is consistent with the cloud offering.
           </p>
           <p class="my-4">
-            In 2023 during a visual refresh the CMS was replaced by Statamic CMS, moving to Laravel based systems as Colleges strategic goal was to standardise frameworks at CLC.
+            In 2023 during a visual refresh Silverstripe CMS was replaced by Statamic CMS, moving to a Laravel based platform, further standardising frameworks at CLC.
           </p>
 
         </div>
@@ -213,27 +213,27 @@
         <div class="antialiased leading-normal my-8">
           <h2 class="title text-6xl font-sans leading-[0.8] font-thin mt-4 mb-8">Front-end</h2>
           <p class="my-4">
-            Templates allow the External Relations team the ability to create content without technical experience. Components were created using standard HTML, SCSS & Native Javascript with branding options so they could be reused across multiple co-brands for consistency.
+            Templates allow the External Relations team to create content without technical experience. Components use standard HTML, SCSS & Native Javascript with branding options allowing reused across multiple co-brands.
           </p>
           <p class="my-4">
-            To facilitate collection of user data, "<a href="https://github.com/silverstripe/silverstripe-userforms" target="_blank">User Defined Forms</a>" module augmented Silverstripe core functionality. the College had specific requirements around forms, contributions to the open source project were made to add required functionality.
+            To facilitate collection of user data, "<a href="https://github.com/silverstripe/silverstripe-userforms" target="_blank">User Defined Forms</a>" module augmented Silverstripes core functionality. College had specific requirements for forms, contributions to the open source project add required functionality.
             My additions to the project were archived by <a href="https://archiveprogram.github.com" target="_blank">Github into the Arctic Code Vault</a> in 2020.
           </p>
           <p class="my-4">
-            Once migrated to Statamic CMS, the additional form functionality was included out the box, many of the components were ported to Statamic Sets, with new additions to refresh the site and add new functionality.
+            Once migrated to Statamic CMS, additional form functionality was included out the box, components were ported to Statamic Sets, with new additions to refresh the site and add new functionality.
           </p>
           <p class="my-4">
-            Tailwind CSS was introduced to replace SCSS and standardise the CSS that was being written, speed up development and reduce the total CSS bundle size and duplications.
+            Tailwind CSS replaced SCSS to standardise the CSS that was being written, speed up development and reduce the total CSS bundle size and duplications.
           </p>
           <p class="my-4">
-            Javascript integrations added additional third party data dynamically on the site, using API provided by each integrator. Social posts with infinite scrolling, news aggregation and RSS support using Flockler. <br>
-            Filterable calendars to show events from the College managed information system iSAMS and Templates to pull job vacancies from HR system using Vacancy filler API.
+            Javascript integrations added additional third party data dynamically, using API provided by each integrator. Social posts with infinite scrolling, News aggregation and RSS support was added using Flockler API. <br>
+            Filterable calendars showing events from the College managed information system iSAMS API & Job vacancies from HR system with Vacancy filler API.
           </p>
           <p class="my-4">
-            The CMS did not support newer image standards and to improve users experience, imagery required optimisation. A custom image pipeline was created to take the large 30meg+ images and crop around custom focal points, resize, compress and produce variations in JPG, WEBP & AVIF reducing images to less than 100kb in size.
+            The CMS did not support newer image standards (AVIF), to improve users experience imagery required further optimisation. A custom image pipeline was created to take the large 30meg+ images & crop around custom focal points, resize, compress and produce variations in JPG, WEBP & AVIF reducing images to less than 100kb in size. Headers throughout this portfolio are examples of images processed in this way.
           </p>
           <p class="my-4">
-            Progressive enhancements to the site were added over the life of the project improving Accessability, Service Workers as well as new functionality to enhance user engagement with the addition of pop-out notices, and more animations with Greensock.
+            Progressive enhancements to the site were added over the life of the project improving Accessability, adding Service Workers as well as new functionality to enhance user engagement with the addition of pop-out notices, & custom animations with Greensock.
           </p>
         </div>
         <div>
@@ -299,11 +299,11 @@
 
 
   <footer class="mt-8 mx-auto px-8 max-w-6xl">
-    <div class="grid grid-cols-2 gap-8 h-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <p class="text-left mt-8 antialiased text-sm text-gray-100">
         Get in touch at <a href="mailto:me@elliotgoode.co.uk">me@elliotgoode.co.uk</a>
       </p>
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid grid-cols-2 gap-8 mb-8">
         <p class="text-left mt-7 antialiased text-xs text-gray-100">
           <a href="/flourish/"><span class="text-lime-50 font-light text-sm">Next Project </span><span class="tracking-wide underline decoration-wavy decoration-from-font underline-offset-4 decoration-lime-400 text-sm font-bold">Flourish</span></a>
         </p>
