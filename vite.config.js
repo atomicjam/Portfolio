@@ -14,7 +14,7 @@ export default defineConfig({
                   name: 'Elliot Goode - Portfolio',
                   short_name: 'Goode',
                   description: 'Elliot Goode, About & Portfolio',
-                  theme_color: '#525252',
+                  theme_color: '#30465a',
                   icons: [
                     {
                       src: "/icons/512.png",
