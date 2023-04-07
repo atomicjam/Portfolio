@@ -13,14 +13,20 @@ export default defineConfig({
                 manifest: { 
                   name: 'Elliot Goode - Portfolio',
                   short_name: 'Goode',
-                  description: 'Elliot Goode about me and portfolio.',
+                  description: 'Elliot Goode, About & Portfolio',
                   theme_color: '#525252',
                   icons: [
                     {
                       src: "/icons/512.png",
                       sizes: "512x512",
                       type: "image/png",
-                      purpose: "any maskable"
+                      purpose: "maskable"
+                    },
+                    {
+                      src: "/icons/512.png",
+                      sizes: "512x512",
+                      type: "image/png",
+                      purpose: "any"
                     }
                   ]
                 }
