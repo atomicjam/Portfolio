@@ -3,15 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 218.1 284.6" style="enable-background:new 0 0 218.1 284.6;" xml:space="preserve">
 <style type="text/css">
-	.st0{display:none;}
-	.st1{display:inline;fill:#605F71;}
-	.st2{fill:none;stroke:#FFFFFF;stroke-width:4.4;stroke-miterlimit:10;}
-	.st3{display:inline;fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:2.5;stroke-miterlimit:10;}
 	.st4{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-miterlimit:10;}
 </style>
-<g id="background" class="st0">
-	<rect x="-324.7" y="-154.6" class="st1" width="841.9" height="599.3"/>
-</g>
 <g id="shield">
 	<g>
 		<g id="XMLID_2_">
@@ -28,9 +22,6 @@
 	<path class="st2" d="M213.4,149.9"/>
 	<path class="st2" d="M3.5,147.4c0,0,3.1,86.3,69.7,132.6c0.5,0.4,1.1,0.8,1.6,1.1l-1.1-0.7l71.5,0.7c68.2-46,68.1-131.2,68.1-131.2
 		"/>
-</g>
-<g id="Hat" class="st0">
-	<polyline class="st3" points="3.5,0 108.2,-8.1 213.6,0 	"/>
 </g>
 <g id="small_top_right">
 	<path class="st4" d="M151.9,55c-0.3-5.9,2.9-8.5,2.9-8.5h-3.4L142.5,35h-6.7l2.4,7.7l2.8-0.1l5.5,12.3L151.9,55L151.9,55z"/>

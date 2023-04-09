@@ -610,7 +610,7 @@ const scroll = () => {
         gsap.to(item, {
             'will-change': 'transform',
             transformOrigin: '50% 50%',
-            opacity: 0.7,
+            opacity: 0.6,
             rotate: 90,
             scale: 0.65,
             ease: 'back',
@@ -657,6 +657,39 @@ leaf.forEach(item => {
         }
     });
 });
+
+// bulb Animation
+const bulb = [...document.querySelectorAll('svg[data-effect-bulb]')];
+
+bulb.forEach(item => { 
+    gsap.to(item, {
+        'will-change': 'transform',
+        transformOrigin: '30% 100%',
+        opacity: 0.85,
+        rotate: 10,
+        ease: 'back',
+        scrollTrigger: {
+            trigger: item,
+            start: 'center center+=25%',
+            end: 'top top+=20%',
+            scrub: true,
+        }
+    });
+    gsap.to(item.querySelectorAll('#filament'), {
+        repeat: -1,
+        opacity: 0,
+        stroke: '#ffff00',
+        scrollTrigger: {
+            trigger: item,
+            start: 'center center-=15%',
+            end: 'top top-=15%',
+            scrub: true,
+        }
+    });
+});
+
+
+
 
 };
 
