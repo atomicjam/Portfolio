@@ -5,11 +5,11 @@ import { VitePWA } from "vite-plugin-pwa"
 
 export default defineConfig({
     plugins: [
-        VitePWA({  
+         VitePWA({  
                 registerType: 'autoUpdate',
                 workbox: {
                   globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,avif,webp,mp4,webm,woff,woff2}']
-                },    
+                }, 
                 manifest: { 
                   name: 'Elliot Goode - Portfolio',
                   short_name: 'Goode',
