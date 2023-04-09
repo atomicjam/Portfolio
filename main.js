@@ -688,8 +688,44 @@ bulb.forEach(item => {
     });
 });
 
+// springy line
+const spring = [...document.querySelectorAll('svg[data-effect-spring]')];
 
+spring.forEach(item => {
+gsap.defaults({ease: 'elastic(1, 0.2)'});
+var svg  = document.querySelector('svg[data-effect-spring]');
+var path = document.querySelector('#spring-path');
+var connected = false;
+var snapDist = 100;
+var startY = 50;
+// Break the path down into points
+// <path d="M200,200 Q 400,200 600,200" />
+var p0 = { x: 0, y: startY };
+var p1 = { x: 150, y: startY };
+var p2 = { x: 300, y: startY };
+svg.addEventListener("mousemove", onMove);
+gsap.ticker.add(update);
+update();
+function update() {
+    var d = "M" + p0.x + "," + p0.y + " Q" + p1.x + "," + p1.y + " " + p2.x + "," + p2.y;
+    path.setAttribute("d", d);
+    if (Math.abs(p1.y - startY) > snapDist * 2) {        
+      connected = false;
+      gsap.to(p1, { duration: 1,  y: startY });
+    }  
+}
+  
+function onMove(event) {
+    if (!connected && event.target === path) {    
+      connected = true;    
+      gsap.killTweensOf(p1); // Kill any active tweens on the point
+    }
+    if (connected) { 
+        p1.y = event.pageY / 3 *1 - (p0.y + p2.y) / 1;   
+    }
+}
 
+});
 
 };
 
