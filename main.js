@@ -1,7 +1,10 @@
 import './style.css'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
+
 import Splitting from "splitting";
 
 import Alpine from 'alpinejs'
@@ -587,8 +590,7 @@ const scroll = () => {
         }
 
     });
-
-// Image Animations
+// Pop Images Animations (All Pages)
     const image_wrapper = [...document.querySelectorAll('.image_wrapper')];
     image_wrapper.forEach(item => { 
         gsap.to(item.querySelector('img'), {
@@ -604,7 +606,7 @@ const scroll = () => {
             }
         });
     });
-// Flower Animation
+// Spin Flower Animation (Flourish)
     const flower = [...document.querySelectorAll('svg[data-effect-flower]')];
     flower.forEach(item => { 
         gsap.to(item, {
@@ -639,7 +641,7 @@ const scroll = () => {
             }
         });
     });
-// Leaf Animation
+// Grow Leaf Animation (Flourish)
 const leaf = [...document.querySelectorAll('svg[data-effect-leaf]')];
 leaf.forEach(item => { 
     gsap.to(item, {
@@ -654,13 +656,12 @@ leaf.forEach(item => {
             start: 'center center+=25%',
             end: 'top top+=20%',
             scrub: true,
+            //markers: true,
         }
     });
 });
-
-// bulb Animation
+// Broken bulb Animation (Helpdesk)
 const bulb = [...document.querySelectorAll('svg[data-effect-bulb]')];
-
 bulb.forEach(item => { 
     gsap.to(item, {
         'will-change': 'transform',
@@ -673,6 +674,7 @@ bulb.forEach(item => {
             start: 'center center+=25%',
             end: 'top top+=20%',
             scrub: true,
+            //markers: true,
         }
     });
     gsap.to(item.querySelectorAll('#filament'), {
@@ -687,45 +689,58 @@ bulb.forEach(item => {
         }
     });
 });
-
-// springy line
+// Springy line (Springboard)
 const spring = [...document.querySelectorAll('svg[data-effect-spring]')];
-
 spring.forEach(item => {
-gsap.defaults({ease: 'elastic(1, 0.2)'});
-var svg  = document.querySelector('svg[data-effect-spring]');
-var path = document.querySelector('#spring-path');
-var connected = false;
-var snapDist = 100;
-var startY = 50;
-// Break the path down into points
-// <path d="M200,200 Q 400,200 600,200" />
-var p0 = { x: 0, y: startY };
-var p1 = { x: 150, y: startY };
-var p2 = { x: 300, y: startY };
-svg.addEventListener("mousemove", onMove);
-gsap.ticker.add(update);
-update();
-function update() {
-    var d = "M" + p0.x + "," + p0.y + " Q" + p1.x + "," + p1.y + " " + p2.x + "," + p2.y;
-    path.setAttribute("d", d);
-    if (Math.abs(p1.y - startY) > snapDist * 2) {        
-      connected = false;
-      gsap.to(p1, { duration: 1,  y: startY });
-    }  
-}
-  
-function onMove(event) {
-    if (!connected && event.target === path) {    
-      connected = true;    
-      gsap.killTweensOf(p1); // Kill any active tweens on the point
+    gsap.defaults({ease: 'elastic(1, 0.2)'});
+    var svg  = document.querySelector('svg[data-effect-spring]');
+    var path = document.querySelector('#spring-path');
+    var connected = false;
+    var snapDist = 50;
+    var startY = 50;
+    // Break the path down into points
+    var p0 = { x: 0, y: startY };
+    var p1 = { x: 150, y: startY };
+    var p2 = { x: 300, y: startY };
+    svg.addEventListener("mousemove", onMove);
+    gsap.ticker.add(update);
+    update();
+    function update() {
+        var d = "M" + p0.x + "," + p0.y + " Q" + p1.x + "," + p1.y + " " + p2.x + "," + p2.y;
+        path.setAttribute("d", d);
+        if (Math.abs(p1.y - startY) > snapDist * 2) {        
+        connected = false;
+        gsap.to(p1, { duration: 2,  y: startY });
+        }  
+    } 
+    function onMove(event) {
+        if (!connected && event.target === path) {    
+        connected = true;    
+        gsap.killTweensOf(p1); // Kill any active tweens on the point
+        }
+        if (connected) { 
+            p1.y = 200; // move center point down 200  
+        }
     }
-    if (connected) { 
-        p1.y = event.pageY / 3 *1 - (p0.y + p2.y) / 1;   
-    }
-}
-
 });
+// Roll ball (Enrolment)
+const roll = [...document.querySelectorAll('svg[data-effect-roll]')];
+roll.forEach(item => {
+    gsap.to(item, {
+        'will-change': 'transform',
+        transformOrigin: '50% 50%',
+        opacity: 1,
+        x: document.querySelector('#enrolment').clientWidth + (document.body.clientWidth / 100 * 14),
+        ease: 'back',
+        scrollTrigger: {
+            trigger: item,
+            start: 'center+=20% bottom',
+            end: '+=50%',
+            scrub: true,
+        }
+    });
+});
+
 
 };
 
@@ -733,11 +748,10 @@ function onMove(event) {
 // GSAP Scroll Triggers
 scroll();
 
-
+// Show DOM when everything is ready
 let domReady = (cb) => {
     (document.readyState === 'interactive' || document.readyState === 'complete') ? cb() : document.addEventListener('DOMContentLoaded', cb);
 };
-
 domReady(() => {
     document.body.style.visibility = 'visible';
 });
